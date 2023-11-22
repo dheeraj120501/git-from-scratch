@@ -7,6 +7,10 @@ This is a simple git implementation made using the following resources
 
 I also documented my learning and some other resources [here](https://dheeraj120501.notion.site/Build-your-own-Git-13d94a5a1082416091f38ac9f3c49797?pvs=4).
 
+## Note for Windows users
+
+`mygit` should run on any Unix-like system with node installed. The test suite absolutely requires a bash-compatible shell, which I assume the WSL can provide for windows user. Also, if you are using WSL, make sure your `mygit` file uses Unix-style line endings ([Solution for VS Code](https://stackoverflow.com/questions/48692741/how-can-i-make-all-line-endings-eols-in-all-files-in-visual-studio-code-unix)).
+
 ## Implemented Features:
 
 | Feature      | Status   |
