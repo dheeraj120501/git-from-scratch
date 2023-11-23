@@ -1,5 +1,5 @@
 import { CliCommand } from "../index.d";
-import init from "./init";
+import cmd_init from "./cmd_init";
 
 const cli_commands: CliCommand[] = [
   // {
@@ -20,19 +20,19 @@ const cli_commands: CliCommand[] = [
   // {
   //   name: "hash-object",
   // },
-  // {
-  //   name: "init",
-  //   description:
-  //     "Create an empty Git repository or reinitialize an existing one",
-  //   action: init,
-  //   args: [
-  //     {
-  //       flag: "path",
-  //       description: "Where to create the repository.",
-  //       defaultValue: ".",
-  //     },
-  //   ],
-  // },
+  {
+    name: "init",
+    description:
+      "Create an empty Git repository or reinitialize an existing one",
+    action: cmd_init,
+    args: [
+      {
+        flag: "path",
+        description: "Where to create the repository.",
+        defaultValue: ".",
+      },
+    ],
+  },
   // {
   //   name: "log",
   // },
