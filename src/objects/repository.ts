@@ -5,7 +5,7 @@ import assert from "node:assert";
 
 // Check if a path is a directory or not
 function isDir(path: string): boolean {
-  return fs.statSync(path).isDirectory();
+  return fs.existsSync(path) && fs.statSync(path).isDirectory();
 }
 
 // As most of the work with mygit revolves around working with .git directory and work tree it is abstracted in a class
@@ -155,4 +155,25 @@ function repoDefaultConfig(): string {
   parser.set("core", "bare", "false");
 
   return parser.stringify();
+}
+
+// Find the root of current repo reccursively
+function repoFind(path = ".", required = true): GitRepository | null {
+  path = fs.realpathSync(path);
+
+  if (isDir(join(path, ".git"))) {
+    return new GitRepository(path);
+  }
+
+  const parent = fs.realpathSync(join(path, ".."));
+
+  // We reached root directory
+  if (parent == path) {
+    if (required) {
+      throw Error("No git directory.");
+    }
+    return null;
+  }
+
+  return repoFind(parent, required);
 }

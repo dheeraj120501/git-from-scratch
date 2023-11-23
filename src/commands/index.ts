@@ -22,8 +22,7 @@ const cli_commands: CliCommand[] = [
   // },
   {
     name: "init",
-    description:
-      "Create an empty Git repository or reinitialize an existing one",
+    description: "Create an empty Git repository",
     action: cmd_init,
     args: [
       {
