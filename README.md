@@ -29,7 +29,7 @@ I also documented my learning and some other resources [here](https://dheeraj120
 | checkout     | &#x2610; |            |
 | commit       | &#x2610; |            |
 | hash-object  | &#x2610; |            |
-| init         | &#x2610; |            |
+| init         | &#x2611; | ⭐         |
 | log          | &#x2610; |            |
 | ls-files     | &#x2610; |            |
 | ls-tree      | &#x2610; |            |
