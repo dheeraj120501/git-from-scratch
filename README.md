@@ -11,13 +11,18 @@ I also documented my learning and some other resources [here](https://dheeraj120
 
 1. Make sure you have git and node installed in your system.
 1. Clone the repo and cd into the project.
-1. Run `npm i`.
-1. Now run `./mygit -V` if it works then checkout the manual using `./mygit help` to see what commands are available.
+1. Run `npm i -g` to globally install the binary.
+1. Now run `mygit -V` if it works then checkout the manual using `mygit help` to see what commands are available.
    - A set of implemented commands are shown below in the table.
 
 ## Note for Windows users
 
-`mygit` should run on any Unix-like system with node installed. The test suite absolutely requires a bash-compatible shell, which I assume the WSL can provide for windows user. Also, if you are using WSL, make sure your `mygit` file uses Unix-style line endings ([Solution for VS Code](https://stackoverflow.com/questions/48692741/how-can-i-make-all-line-endings-eols-in-all-files-in-visual-studio-code-unix)).
+In the `bin` folder there are 2 files `mygit` and `mygit.js` to run the CLI on windows on can just run `npm i -g` in the root directory to globally install the binary in which case the CLI can be accessed using `mygit` alias.
+
+One other way is to setup the `bin` folder in the environment variables path so that it can be accessed from anywhere in the system but for that one have to use WSL.
+
+- Because `mygit` should run on any Unix-like system with node installed. The test suite absolutely requires a bash-compatible shell, which I assume the WSL can provide for windows user.
+- Also, if you are using WSL, make sure your `mygit` file uses Unix-style line endings ([Solution for VS Code](https://stackoverflow.com/questions/48692741/how-can-i-make-all-line-endings-eols-in-all-files-in-visual-studio-code-unix)).
 
 ## Implemented Features:
 

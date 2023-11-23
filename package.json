@@ -2,11 +2,14 @@
   "name": "git-from-scratch",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./bin/mygit.js",
   "scripts": {
     "prebuild": "rm -rf dist",
     "build": "tsc",
     "dev": "ts-node-dev --transpile-only --no-notify src"
+  },
+  "bin": {
+    "mygit": "./bin/mygit.js"
   },
   "keywords": [],
   "author": "",
