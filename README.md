@@ -45,9 +45,3 @@ One other way is to setup the `bin` folder in the environment variables path so 
 | tag          | &#x2610; |            |
 | branch       | &#x2610; |            |
 | clone        | &#x2610; |            |
-
-## Dependencies
-
-Git is a CLI application, so `commanderjs` is used to parse command-line arguments
-
-Git uses a configuration file format that is basically Microsoft’s INI format. The `config-ini-parser` package can read and write these files.
